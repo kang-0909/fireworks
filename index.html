@@ -173,8 +173,8 @@
             }
             angle = Math.atan2(playerz, playerx);
             dis = Math.sqrt(playerx * playerx + playerz * playerz);
-            dis += Math.sin(frames / 80) * 1.15;
-            delta = Math.sin(frames / 300) / 40;
+            dis += Math.sin(frames / 150) /1.5;
+            delta = Math.sin(frames / 550) / 40;
             playerx = Math.cos(angle + delta) * dis;
             playerz = Math.sin(angle + delta) * dis;
             leftright = PI/2 + angle + delta;
