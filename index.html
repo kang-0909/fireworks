@@ -29,7 +29,7 @@
             ctx = canvas.getContext("2d"),
             cx = canvas.width / 2,
             cy = canvas.height / 2,
-            playerx = 0, playery = -13, playerz = -15,  //观测坐标，(x, y) 是显示器的平面，x向右y向下z向里
+            playerx = 0, playery = -15, playerz = -15,  //观测坐标，(x, y) 是显示器的平面，x向右y向下z向里
             leftright = 0,  //视角
             scale = 600,
             seedTimer = 0, seedLife = 100, seedInterval = 4,
@@ -80,10 +80,10 @@
             var seed = new Object();
             seed.x = -80 + Math.random() * 160;
             seed.z = -80 + Math.random() * 160;
-            seed.y = 43;
+            seed.y = 50;
             seed.vx = .08 - Math.random() * .16;
             seed.vz = .08 - Math.random() * .16;
-            seed.vy = -1.5;
+            seed.vy = -1.6;
             seed.born = frames;
             seeds.push(seed);
         }
@@ -188,7 +188,7 @@
             ctx.fillStyle = "#ff8";
             for (let i = -150; i <= 150; i += 10) {
                 for (let j = -150; j <= 150; j += 10) {
-                    x = i, z = j, y = 43;
+                    x = i, z = j, y = 50;
                     point = project(x, y, z);
                     if (point.d != -1) {
                         size = 300 / (0.1 + point.d);
