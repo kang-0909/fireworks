@@ -24,7 +24,7 @@
         canvas.width = canvas.clientWidth;
         canvas.height = canvas.clientHeight;
         var
-            src = "https://cantelope.org/NYE/",
+            //src = "images",
             PI = Math.PI,
             ctx = canvas.getContext("2d"),
             cx = canvas.width / 2,
@@ -42,7 +42,7 @@
 
         for (let i = 1; i <= 10; i++) {
             temp = new Image();
-            temp.src = src + "spark" + i + ".png";
+            temp.src = "images/spark" + i + ".png";
             sparkimgs.push(temp);
         }
         function project(x, y, z) {
@@ -116,7 +116,7 @@
                 spark.trail = new Array();
                 sparks.push(spark);
             }
-            boom = new Audio(src + "pow" + (1 + parseInt(Math.random() * 4)) + ".ogg"); 
+            boom = new Audio("audios/pow" + (1 + parseInt(Math.random() * 4)) + ".ogg"); 
             dis = Math.sqrt((x - playerx) * (x - playerx) + (y - playery) * (y - playery) + (z - playerz) * (z - playerz));
             boom.volume = 1.5 / (.1 + dis / 10);
             boom.play();
@@ -200,7 +200,6 @@
                             ctx.fillRect(point.x - size/2, point.y - size/2, size, size);
                         }
                     }
-
                 }
             }
             //画种子
